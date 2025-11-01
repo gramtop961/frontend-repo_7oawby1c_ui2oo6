@@ -1,47 +1,49 @@
+import React from 'react';
 import Spline from '@splinetool/react-spline';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[90vh] w-full overflow-hidden bg-[#0a0b0f]" aria-label="Hero">
-      {/* 3D Scene */}
+    <section id="home" className="relative min-h-[85vh] sm:min-h-screen overflow-hidden">
       <div className="absolute inset-0">
-        <Spline scene="https://prod.spline.design/4Zh-Q6DWWp5yPnQf/scene.splinecode" style={{ width: '100%', height: '100%' }} />
+        <Spline
+          scene="https://prod.spline.design/6K1gO3z1h3cMOzjT/scene.splinecode"
+          style={{ width: '100%', height: '100%' }}
+        />
       </div>
 
-      {/* Subtle gradient overlays that don't block interaction */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_40%_at_50%_10%,rgba(59,130,246,0.15),transparent),radial-gradient(40%_30%_at_80%_20%,rgba(168,85,247,0.12),transparent)]" />
+      {/* Soft gradient accents that do not block interaction */}
+      <div className="pointer-events-none absolute -top-24 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-fuchsia-500/30 blur-3xl"></div>
+      <div className="pointer-events-none absolute bottom-0 right-0 h-80 w-80 translate-x-1/3 translate-y-1/3 rounded-full bg-indigo-500/30 blur-3xl"></div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-24">
-        <div className="max-w-3xl">
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/80 backdrop-blur-md">
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            Available for new projects
-          </span>
-          <h1 className="mt-6 text-4xl sm:text-6xl font-semibold tracking-tight text-white">
-            Clean, modern web design that converts.
-          </h1>
-          <p className="mt-4 text-base sm:text-lg leading-relaxed text-white/70">
-            We craft fast, aesthetic websites with immersive interactions and a focus on results. From landing pages to full brand experiences, we design to perform.
+      {/* Foreground content */}
+      <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center px-4 pt-28 sm:pt-36 text-center">
+        <div className="rounded-2xl border border-white/15 bg-white/5 backdrop-blur px-6 py-5 shadow-xl">
+          <p className="inline-flex items-center gap-2 text-xs font-medium tracking-wide text-slate-200">
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-400" />
+            We craft luminous digital experiences
           </p>
+        </div>
 
-          <div className="mt-8 flex flex-wrap items-center gap-3">
-            <a
-              href="#contact"
-              className="group inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-medium text-white bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-400 shadow-lg shadow-indigo-500/20 transition-transform hover:scale-[1.02] active:scale-[0.99]"
-            >
-              Start a project
-              <svg className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path d="M12.293 4.293a1 1 0 011.414 0l3.999 3.999a1 1 0 010 1.414l-3.999 3.999a1 1 0 11-1.414-1.414L14.586 10H3a1 1 0 010-2h11.586l-2.293-2.293a1 1 0 010-1.414z" />
-              </svg>
-            </a>
-            <a
-              href="#work"
-              className="inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-medium text-white/90 border border-white/15 bg-white/5 backdrop-blur-md hover:bg-white/10 transition-colors"
-            >
-              See our work
-            </a>
-          </div>
+        <h1 className="mt-6 max-w-3xl bg-gradient-to-b from-white to-white/70 bg-clip-text text-4xl font-semibold leading-tight text-transparent sm:text-6xl">
+          Design, motion, and web engineered to shine
+        </h1>
+        <p className="mt-6 max-w-2xl text-base text-slate-300 sm:text-lg">
+          Premium websites and interactive 3D that feel alive. We blend design, code, and motion for brands that want to glow.
+        </p>
+
+        <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row">
+          <a
+            href="#contact"
+            className="inline-flex items-center justify-center rounded-md bg-white px-5 py-3 text-sm font-medium text-slate-900 shadow-sm transition hover:bg-slate-100"
+          >
+            Start a project
+          </a>
+          <a
+            href="#services"
+            className="inline-flex items-center justify-center rounded-md border border-white/20 bg-white/5 px-5 py-3 text-sm font-medium text-white backdrop-blur transition hover:bg-white/10"
+          >
+            Explore services
+          </a>
         </div>
       </div>
     </section>
